@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="helloWorld" class="com.spring.quickstart.annotation.Hello"/>
+    <!--<bean id="phone" class="com.spring.quickstart.annotation.Phone">
+        &lt;!&ndash;<property name="brand" value="小米"/>
+        <property name="brice" value="1499"/>&ndash;&gt;
+        <constructor-arg name="brand" value="小米"/>
+        <constructor-arg name="price" value="1499"/>
+    </bean>-->
+    <!--<bean id="student" class="com.spring.quickstart.annotation.Student">
+        &lt;!&ndash;配置一个Student类的&ndash;&gt;
+        <property name="name" value="Tom"/>
+        <property name="age" value="20"/>
+        <property name="phone" ref="phone"/>
+        &lt;!&ndash;<constructor-arg name="name" value="Tom"/>
+        <constructor-arg name="age" value="21"/>
+        <constructor-arg name="phone" ref="phone"/>&ndash;&gt;
+    </bean>-->
+</beans>
