@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--配置一个Max的bean-->
+    <bean id="max" class="com.spring.test.Max">
+        <constructor-arg name="a" value="5"/>
+        <constructor-arg name="b" value="3"/>
+    </bean>
+
+    <bean id="user" class="com.spring.UserLogin.User">
+         <constructor-arg name="user" value="admin"/>
+        <constructor-arg name="password" value="123"/>
+    </bean>
+    <bean id="userLogin" class="com.spring.UserLogin.UserLogin">
+        <constructor-arg name="user" ref="user"/>
+    </bean>
+</beans>
