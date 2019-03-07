@@ -14,7 +14,6 @@
         <aop:aspect id="before" ref="myBeforeAdvice">
             <aop:pointcut id="myPointCut" expression="execution(* com.spring.aop.*.*(..))"/>
             <aop:before method="beforeMethod" pointcut-ref="myPointCut"/>
-
         </aop:aspect>
     </aop:config>
 </beans>
