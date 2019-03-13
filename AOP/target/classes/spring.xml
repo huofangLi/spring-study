@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--配置一个UserDao的bean，等同于UserDao userDao = new UserDaoImpl();-->
+    <bean id="userDao" class="com.spring.aop.UserDaoImpl"/>
+
+    <!--配置一个BeforeAdvice前置增强的bean-->
+    <bean id="beforeAdvice" class="com.spring.aop.BeforeAdvice"/>
+
+    <!--配置AOP-->
+    <aop:config>
+        <aop:aspect id="before" ref="beforeAdvice">
+            <aop:pointcut id="myPoint" expression="execution(* com.spring.aop.*.*(..))"/>
+            <aop:before method="connectDB" pointcut-ref="myPoint"/>
+        </aop:aspect>
+    </aop:config>
+</beans>

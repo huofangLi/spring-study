@@ -5,16 +5,18 @@
 
 
     <!--配置一个Max的bean-->
-    <bean id="max" class="com.spring.test.Max">
+    <bean id="max" class="com.spring.orm.test.Max">
         <constructor-arg name="a" value="5"/>
         <constructor-arg name="b" value="3"/>
     </bean>
 
-    <bean id="user" class="com.spring.UserLogin.User">
-         <constructor-arg name="user" value="admin"/>
+    <!--配置User和UserLogin的bean-->
+    <bean id="user" class="com.spring.orm.UserLogin.User">
+        <constructor-arg name="user" value="admin"/>
         <constructor-arg name="password" value="123"/>
     </bean>
-    <bean id="userLogin" class="com.spring.UserLogin.UserLogin">
+    <bean id="userLogin" class="com.spring.orm.UserLogin.UserLogin">
         <constructor-arg name="user" ref="user"/>
     </bean>
+
 </beans>

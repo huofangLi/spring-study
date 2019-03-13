@@ -47,10 +47,12 @@ public class UserServiceImplTest {
     @Test
     public void selectUsers() {
         List<User> users = userService.selectUsers();
-        for (int i=0;i<users.size();i++){
+        /*for (int i=0;i<users.size();i++){
             System.out.println(users);
-        }
-//        users.forEach(user -> System.out.println(users));
+        }*/
+        users.forEach(user -> {
+            System.out.println(user);
+        });
     }
 
     @Test

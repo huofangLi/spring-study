@@ -3,31 +3,31 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="messageServiceImpl" class="com.spring.MessageServiceImpl">
+    <bean id="messageServiceImpl" class="com.spring.orm.MessageServiceImpl">
         <constructor-arg name="username" value="Li Huofang"/>
         <constructor-arg name="age" value="20"/>
     </bean>
-    <bean id="messagePrinter" class="com.spring.MessagePrinter">
+    <bean id="messagePrinter" class="com.spring.orm.MessagePrinter">
         <constructor-arg name="service" ref="messageServiceImpl"/>
     </bean>
 
 
-    <bean id="car1" class="com.spring.IoC.Car">
+    <bean id="car1" class="com.spring.orm.IoC.Car">
         <property name="brand" value="奔驰"/>
         <property name="color" value="白色"/>
         <property name="parameter" value="T 3.0"/>
     </bean>
-    <bean id="car2" class="com.spring.IoC.Car">
+    <bean id="car2" class="com.spring.orm.IoC.Car">
         <property name="brand" value="劳斯莱斯"/>
         <property name="color" value="红色"/>
         <property name="parameter" value="T 3.0"/>
     </bean>
-    <bean id="car3" class="com.spring.IoC.Car">
+    <bean id="car3" class="com.spring.orm.IoC.Car">
         <property name="brand" value="路虎"/>
         <property name="color" value="黑色"/>
         <property name="parameter" value="T 3.0"/>
     </bean>
-    <bean id="boss1" class="com.spring.IoC.Boss">
+    <bean id="boss1" class="com.spring.orm.IoC.Boss">
         <property name="name" value="李"/>
         <property name="commany" value="科技公司"/>
         <property name="car" ref="car1"/>
@@ -38,7 +38,7 @@
             </list>
         </property>
     </bean>
-    <bean id="boss2" class="com.spring.IoC.Boss">
+    <bean id="boss2" class="com.spring.orm.IoC.Boss">
         <property name="name" value="王"/>
         <property name="commany" value="科技公司"/>
         <property name="car" ref="car2"/>
@@ -49,7 +49,7 @@
             </list>
         </property>
     </bean>
-    <bean id="boss3" class="com.spring.IoC.Boss">
+    <bean id="boss3" class="com.spring.orm.IoC.Boss">
         <property name="name" value="常"/>
         <property name="commany" value="科技公司"/>
         <property name="car" ref="car3"/>
@@ -60,7 +60,7 @@
             </list>
         </property>
     </bean>
-    <bean id="meeting" class="com.spring.IoC.Meeting">
+    <bean id="meeting" class="com.spring.orm.IoC.Meeting">
         <property name="theme" value="环保"/>
         <property name="boss">
             <list>

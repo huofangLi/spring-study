@@ -10,11 +10,13 @@
         <constructor-arg name="b" value="3"/>
     </bean>
 
+    <!--配置User和UserLogin的bean-->
     <bean id="user" class="com.spring.UserLogin.User">
-         <constructor-arg name="user" value="admin"/>
+        <constructor-arg name="user" value="admin"/>
         <constructor-arg name="password" value="123"/>
     </bean>
     <bean id="userLogin" class="com.spring.UserLogin.UserLogin">
         <constructor-arg name="user" ref="user"/>
     </bean>
+
 </beans>

@@ -4,10 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!--配置一个Hello的bean，等同于Hello hello = newHelloImpl();-->
-    <bean id="hello" class="com.spring.aop.HelloImpl"/>
+    <bean id="hello" class="HelloImpl"/>
 
     <!--配置一个MyBeforeAdvice前置增强的bean-->
-    <bean id="myBeforeAdvice" class="com.spring.aop.MyBeforeAdvice"/>
+    <bean id="myBeforeAdvice" class="MyBeforeAdvice"/>
 
     <!--配置AOP-->
     <aop:config>
@@ -16,4 +16,12 @@
             <aop:before method="beforeMethod" pointcut-ref="myPointCut"/>
         </aop:aspect>
     </aop:config>
+
+
+    <!--aop2配置Tiger的xml-->
+    <!--启动AspectJ支持-->
+    <aop:aspectj-autoproxy/>
+    <!--配置bean-->
+    <bean id="tiger" class="com.spring.orm.aspectj.Tiger"/>
+    <bean id="fighter" class="com.spring.orm.aspectj.Fighter"/>
 </beans>

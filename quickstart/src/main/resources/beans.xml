@@ -4,14 +4,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <bean id="helloWorld" class="com.spring.quickstart.annotation.Hello"/>
-    <!--<bean id="phone" class="com.spring.quickstart.annotation.Phone">
+    <bean id="helloWorld" class="com.spring.orm.quickstart.annotation.Hello"/>
+    <!--<bean id="phone" class="Phone">
         &lt;!&ndash;<property name="brand" value="小米"/>
         <property name="brice" value="1499"/>&ndash;&gt;
         <constructor-arg name="brand" value="小米"/>
         <constructor-arg name="price" value="1499"/>
     </bean>-->
-    <!--<bean id="student" class="com.spring.quickstart.annotation.Student">
+    <!--<bean id="student" class="Student">
         &lt;!&ndash;配置一个Student类的&ndash;&gt;
         <property name="name" value="Tom"/>
         <property name="age" value="20"/>
